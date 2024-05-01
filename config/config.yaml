@@ -1,0 +1,20 @@
+#config_version=6
+
+# minimal example to just play a video with you run mpf (i.e.- "mpf both")
+
+displays:
+  window:
+    # just made the size match the video I recorded, to keep it simple
+    width: 1452
+    height: 780
+
+slides:
+  welcome_slide:
+    widgets:
+      - type: video
+        # mpf auto detects video files in your folder, and just wants the name (without extension) here
+        video: docs
+
+# just tells mpf to play the slide at startup, normally you would play based on events in the game
+slide_player:
+  init_done: welcome_slide
